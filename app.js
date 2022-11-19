@@ -1,22 +1,22 @@
-import express from "express";
-import mongoose from "mongoose";
-import dotenv from "dotenv";
-import productRouter from "./routes/productRoutes.js";
-import reviewRouter from "./routes/reviewRoute.js";
-import pagesRouter from "./routes/pagesRouter.js";
+const express = require("express");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+const productRouter = require("./routes/productRoutes");
+const reviewRouter = require("./routes/reviewRoute");
+const pagesRouter = require("./routes/pagesRouter");
 
-import orderRouter from "./routes/orderRouter.js";
-import gatewayRouterDB from "./routes/gatewayRouter.js";
+const orderRouter = require("./routes/orderRouter");
+const gatewayRouterDB = require("./routes/gatewayRouter");
 
-import usersRouter from "./routes/usersRoutes.js";
-import supportRouter from "./routes/supportRouter.js";
-import settingsRouter from "./routes/settingsRouter.js";
+const usersRouter = require("./routes/usersRoutes");
+const supportRouter = require("./routes/supportRouter");
+const settingsRouter = require("./routes/settingsRouter");
 
-import subscribersRouter from "./routes/subscribersList.js";
-import bodyParser from "body-parser";
-import gatewayRouter from "./routes/gateway/gatewayKeys.js";
-import Products from "./models/products.js";
-import cors from "cors";
+const subscribersRouter = require("./routes/subscribersList");
+const bodyParser = require("body-parser");
+const gatewayRouter = require("./routes/gateway/gatewayKeys");
+const Products = require("./models/products");
+const cors = require("cors");
 
 const port = 500;
 const app = express();
@@ -73,3 +73,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(port, () => console.log(`Server connected to port:   ${port}`));
+
+// "type": "module"

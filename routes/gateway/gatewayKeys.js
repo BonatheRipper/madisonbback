@@ -1,4 +1,4 @@
-import express from "express";
+const express = require("express");
 
 const gatewayRouter = express.Router();
 gatewayRouter.get("/paypal", (req, res) => {
@@ -13,4 +13,4 @@ gatewayRouter.get("/paystack", (req, res) => {
 gatewayRouter.get("/flutterwave", (req, res) => {
   res.send("FLWPUBK_TEST-f1354d054c3540ec3063e0a6970babaf-X" || "sb");
 });
-export default gatewayRouter;
+module.exports = gatewayRouter;
