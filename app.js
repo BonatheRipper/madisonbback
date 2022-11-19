@@ -49,6 +49,9 @@ app.use(cors());
 
 // app.use(express.json());
 // app.use(express.urlencoded({ extended: true }));
+app.get("/", (req, res) => {
+  res.send("Welcome");
+});
 app.use("/api/users", usersRouter);
 app.use("/api/orders", orderRouter);
 app.use("/api/products", productRouter);
