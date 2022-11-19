@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const productRouter = require("./routes/productRoutes");
 const reviewRouter = require("./routes/reviewRoute");
-const pagesRouter = require("./routes/pagesRouter");
+const pagesRouter = require("./routes/pagesRouter.js");
 
 const orderRouter = require("./routes/orderRouter");
 const gatewayRouterDB = require("./routes/gatewayRouter");
